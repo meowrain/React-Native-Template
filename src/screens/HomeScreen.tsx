@@ -1,19 +1,14 @@
-import React from 'react'
-import {View, Text, StyleSheet, Button} from 'react-native'
+import React, {useState} from 'react'
+import {StyleSheet, SafeAreaView} from 'react-native'
+import {NFTCard} from "@/components";
+import Header from "@/components/Header";
 
 export default function HomeScreen({navigation}: any) {
     return (
-        <View style={styles.container}>
-            <Text>This is the Home Page</Text>
-            <Button
-                title="Go to Details"
-                onPress={() => {
-                    navigation.navigate('DetailsScreen',{
-                        theme: 'dark'
-                    })
-                }}
-            />
-        </View>
+        <SafeAreaView style={{flex: 1}}>
+            <Header title={"Home"} ></Header>
+        <NFTCard />
+        </SafeAreaView>
     )
 }
 const styles = StyleSheet.create({
@@ -23,4 +18,5 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
+
 });
