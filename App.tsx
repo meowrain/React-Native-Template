@@ -6,12 +6,11 @@ import {NavigationContainer, DefaultTheme} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {useFonts} from 'expo-font'
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import { Text, BottomNavigation } from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import HomeScreen from '@/screens/HomeScreen';
 import DetailsScreen from '@/screens/DetailsScreen';
-
 const Tab = createBottomTabNavigator(); // 新增创建底部导航栏
+
 const Stack = createNativeStackNavigator();
 const theme = {
     ...DefaultTheme,
